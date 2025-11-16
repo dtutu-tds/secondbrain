@@ -1,21 +1,23 @@
-# Obsidian
+# Obsidian - personal workspace settings (should be ignored)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/hotkeys.json
-.obsidian/app.json
 .obsidian/appearance.json
 .obsidian/graph.json
 .obsidian/canvas.json
 .obsidian/backlink.json
-.obsidian/core-plugins.json
 .obsidian/core-plugins-migration.json
-.obsidian/community-plugins.json
 .obsidian/starred.json
 .obsidian/bookmarks.json
 
+# Obsidian - IMPORTANT: Keep these files tracked for system to work!
+# .obsidian/app.json - Basic app settings (keep tracked)
+# .obsidian/core-plugins.json - Core plugins list (keep tracked)
+# .obsidian/community-plugins.json - Community plugins list (keep tracked)
+# .obsidian/plugins/*/data.json - Plugin configurations (keep tracked)
+
 # Obsidian cache
 .obsidian/cache
-.obsidian/plugins/*/data.json
 .trash/
 
 # OS files

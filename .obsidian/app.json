@@ -1,0 +1,20 @@
+{
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00_Входящие",
+  "attachmentFolderPath": "90_Система/Вложения",
+  "showLineNumber": true,
+  "spellcheck": true,
+  "strictLineBreaks": false,
+  "readableLineLength": true,
+  "tabSize": 2,
+  "defaultViewMode": "source",
+  "livePreview": true,
+  "showFrontmatter": true,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showInlineTitle": true,
+  "useTab": false,
+  "promptDelete": false,
+  "alwaysShowSearch": false
+}

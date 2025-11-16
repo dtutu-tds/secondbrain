@@ -1,0 +1,44 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "90_Система/Шаблоны",
+  "templates_pairs": [
+    ["", ""]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "07_Дневник/Ежедневные",
+      "template": "90_Система/Шаблоны/Daily_Lite.md"
+    },
+    {
+      "folder": "07_Дневник/Еженедельные",
+      "template": "90_Система/Шаблоны/Weekly.md"
+    },
+    {
+      "folder": "07_Дневник/Ежемесячные",
+      "template": "90_Система/Шаблоны/Monthly.md"
+    },
+    {
+      "folder": "02_Проекты",
+      "template": "90_Система/Шаблоны/Project.md"
+    },
+    {
+      "folder": "09_Биохакинг/Вещества",
+      "template": "90_Система/Шаблоны/Substance.md"
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    ""
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "enable_ribbon_icon": true
+}
