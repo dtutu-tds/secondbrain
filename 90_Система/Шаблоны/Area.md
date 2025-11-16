@@ -35,18 +35,28 @@ tags:
 
 ## 🎯 Связанные цели
 
-```dataview
-LIST
-FROM "01_Хаб"
-WHERE type = "goal" AND contains(area, "<% tp.frontmatter.name %>")
+```dataviewjs
+const areaName = dv.current().name;
+const goals = dv.pages('"01_Хаб"')
+    .where(p => p.type === "goal" && p.area && p.area.includes(areaName));
+if (goals.length > 0) {
+    dv.list(goals.map(g => g.file.link));
+} else {
+    dv.paragraph("*Нет связанных целей*");
+}
 ```
 
 ## 🚧 Активные проекты
 
-```dataview
-LIST
-FROM "02_Проекты"
-WHERE contains(area, "<% tp.frontmatter.name %>") AND status != "completed"
+```dataviewjs
+const areaName = dv.current().name;
+const projects = dv.pages('"02_Проекты"')
+    .where(p => p.area && p.area.includes(areaName) && p.status !== "completed");
+if (projects.length > 0) {
+    dv.list(projects.map(p => p.file.link));
+} else {
+    dv.paragraph("*Нет активных проектов*");
+}
 ```
 
 ---

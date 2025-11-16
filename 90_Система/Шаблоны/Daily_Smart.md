@@ -3,6 +3,9 @@
 // УМНЫЙ ДНЕВНИК - АДАПТИВНЫЙ К ВРЕМЕНИ СУТОК
 // ========================================
 
+// Устанавливаем русскую локаль
+moment.locale('ru');
+
 const hour = moment().hour();
 let timeContext = "";
 let sections = [];
@@ -18,9 +21,18 @@ if (hour >= 5 && hour < 12) {
     timeContext = "night";
 }
 
+// Маппинг месяцев для путей (Obsidian использует конкретный формат)
+const monthMap = {
+    "01": "01-Январь", "02": "02-Февраль", "03": "03-Март",
+    "04": "04-Апрель", "05": "05-Май", "06": "06-Июнь",
+    "07": "07-Июль", "08": "08-Август", "09": "09-Сентябрь",
+    "10": "10-Октябрь", "11": "11-Ноябрь", "12": "12-Декабрь"
+};
+
 // Получаем данные о вчерашнем дне для контекста
 const yesterday = moment().subtract(1, 'days');
-const yesterdayPath = `07_Дневник/Ежедневные/${yesterday.format("YYYY")}/${yesterday.format("MM")}-${yesterday.format("MMMM")}/${yesterday.format("DD-MM-YY")}.md`;
+const yesterdayMonth = monthMap[yesterday.format("MM")];
+const yesterdayPath = `07_Дневник/Ежедневные/${yesterday.format("YYYY")}/${yesterdayMonth}/${yesterday.format("DD-MM-YY")}.md`;
 const yesterdayFile = app.vault.getAbstractFileByPath(yesterdayPath);
 let yesterdayData = null;
 
@@ -197,7 +209,7 @@ if (!today.energy) recommendations.push("⚡ Укажи уровень энер�
 if (!today.sleep_quality) recommendations.push("😴 Отметь качество сна");
 
 // Проверяем привычки
-const habits = dv.pages('"" WHERE type = "habit"');
+const habits = dv.pages().where(p => p.type === "habit");
 if (habits.length > 0) {
     recommendations.push("🔄 Проверь трекинг привычек");
 }

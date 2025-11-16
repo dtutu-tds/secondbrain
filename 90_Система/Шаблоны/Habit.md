@@ -35,13 +35,24 @@ tags:
 ### Текущая серия: **<% tp.frontmatter.streak %> дней**
 ### Лучшая серия: **<% tp.frontmatter.best_streak %> дней**
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "День",
-  choice(contains(file.content, "<% tp.frontmatter.name %>"), "✅", "❌") as "Выполнено"
-FROM "07_Дневник/Ежедневные"
-WHERE file.day >= date(today) - dur(7 days)
-SORT file.day DESC
+```dataviewjs
+const habitName = dv.current().name;
+const days = dv.pages('"07_Дневник/Ежедневные"')
+    .where(p => p.file.day >= dv.date("today").minus({days: 7}))
+    .sort(p => p.file.day, "desc");
+
+const rows = [];
+for (const day of days) {
+    const content = await dv.io.load(day.file.path);
+    const completed = content.includes(habitName) ? "✅" : "❌";
+    rows.push([day.file.link, completed]);
+}
+
+if (rows.length > 0) {
+    dv.table(["День", "Выполнено"], rows);
+} else {
+    dv.paragraph("*Нет данных за последние 7 дней*");
+}
 ```
 
 ## 🔗 Триггер → Действие → Награда

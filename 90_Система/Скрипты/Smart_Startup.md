@@ -4,7 +4,16 @@
 // ========================================
 
 const moment = window.moment;
+moment.locale('ru'); // Устанавливаем русскую локаль
 const dv = app.plugins.plugins.dataview?.api;
+
+// Маппинг месяцев для путей
+const monthMap = {
+    "01": "01-Январь", "02": "02-Февраль", "03": "03-Март",
+    "04": "04-Апрель", "05": "05-Май", "06": "06-Июнь",
+    "07": "07-Июль", "08": "08-Август", "09": "09-Сентябрь",
+    "10": "10-Октябрь", "11": "11-Ноябрь", "12": "12-Декабрь"
+};
 
 // Определяем время суток
 const hour = moment().hour();
@@ -32,7 +41,8 @@ if (hour >= 5 && hour < 12) {
 
 // Проверяем существование заметки на сегодня
 const today = moment().format("DD-MM-YY");
-const todayPath = `07_Дневник/Ежедневные/${moment().format("YYYY")}/${moment().format("MM")}-${moment().format("MMMM")}/${today}.md`;
+const currentMonth = monthMap[moment().format("MM")];
+const todayPath = `07_Дневник/Ежедневные/${moment().format("YYYY")}/${currentMonth}/${today}.md`;
 const dailyFile = app.vault.getAbstractFileByPath(todayPath);
 
 // Собираем статистику хранилища
