@@ -9,7 +9,7 @@ tags:
   - daily
 ---
 
-# <% tp.date.now("DD-MM-YY") %>
+# <% tp.date.now("YYYY-MM-DD") %>
 
 ## 🎯 Проверка состояния
 

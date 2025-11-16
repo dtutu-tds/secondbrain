@@ -1,0 +1,29 @@
+{
+  "daily": {
+    "format": "YYYY-MM-DD",
+    "template": "90_Система/Шаблоны/Daily_Lite.md",
+    "folder": "07_Дневник/Ежедневные/{{date:YYYY}}/{{date:MM-MMMM}}",
+    "enabled": true
+  },
+  "weekly": {
+    "format": "gggg-[W]ww",
+    "template": "90_Система/Шаблоны/Weekly.md",
+    "folder": "07_Дневник/Еженедельные",
+    "enabled": true
+  },
+  "monthly": {
+    "format": "YYYY-MM",
+    "template": "90_Система/Шаблоны/Monthly.md",
+    "folder": "07_Дневник/Ежемесячные",
+    "enabled": true
+  },
+  "quarterly": {
+    "enabled": false
+  },
+  "yearly": {
+    "enabled": false
+  },
+  "showGettingStartedBanner": false,
+  "hasMigratedDailyNoteSettings": true,
+  "hasMigratedWeeklyNoteSettings": true
+}

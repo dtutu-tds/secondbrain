@@ -1,0 +1,20 @@
+{
+  "new-card-insertion-method": "prepend",
+  "lane-toggle-collapse-state": true,
+  "date-trigger": "@",
+  "time-trigger": "@@",
+  "link-date-to-daily-note": true,
+  "hide-card-count": false,
+  "hide-tags-in-title": false,
+  "hide-tags-display": false,
+  "show-checkboxes": false,
+  "prepend-archive-separator": false,
+  "prepend-archive-date": false,
+  "show-add-list": true,
+  "show-archive-all": true,
+  "show-view-as-markdown": true,
+  "show-board-settings": true,
+  "show-search": true,
+  "tag-action": "kanban-lane",
+  "show-set-view": true
+}
