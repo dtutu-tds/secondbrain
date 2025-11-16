@@ -1,0 +1,7 @@
+{
+  "showWeeklyNote": true,
+  "weekStart": "monday",
+  "wordsPerDot": 250,
+  "showFileCreationDate": false,
+  "localeOverride": "system-default"
+}

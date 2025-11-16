@@ -1,0 +1,212 @@
+{
+  "nodes": [
+    {
+      "id": "center",
+      "type": "text",
+      "text": "# 🧠 Второй Мозг\n\nЦентр управления жизнью",
+      "x": 0,
+      "y": 0,
+      "width": 300,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "goals",
+      "type": "file",
+      "file": "01_Хаб/Цели_2025.md",
+      "x": -500,
+      "y": -300,
+      "width": 350,
+      "height": 300
+    },
+    {
+      "id": "projects",
+      "type": "file",
+      "file": "02_Проекты/_Проекты_База.md",
+      "x": 150,
+      "y": -300,
+      "width": 350,
+      "height": 300
+    },
+    {
+      "id": "analytics",
+      "type": "file",
+      "file": "01_Хаб/Аналитика_Продуктивности.md",
+      "x": -500,
+      "y": 200,
+      "width": 350,
+      "height": 300
+    },
+    {
+      "id": "biohacking",
+      "type": "file",
+      "file": "09_Биохакинг/Био_Дашборд.md",
+      "x": 150,
+      "y": 200,
+      "width": 350,
+      "height": 300
+    },
+    {
+      "id": "home",
+      "type": "file",
+      "file": "01_Хаб/Главная.md",
+      "x": -200,
+      "y": -600,
+      "width": 400,
+      "height": 200
+    },
+    {
+      "id": "stoplist",
+      "type": "file",
+      "file": "01_Хаб/Стоп_Лист.md",
+      "x": -700,
+      "y": 0,
+      "width": 250,
+      "height": 150
+    },
+    {
+      "id": "kanban",
+      "type": "file",
+      "file": "80_Канбан/Доска_Жизни.md",
+      "x": 450,
+      "y": 0,
+      "width": 250,
+      "height": 150
+    },
+    {
+      "id": "moc",
+      "type": "file",
+      "file": "01_Хаб/MOC_Индекс.md",
+      "x": 0,
+      "y": 600,
+      "width": 350,
+      "height": 200
+    },
+    {
+      "id": "health_label",
+      "type": "text",
+      "text": "## 🏃 Здоровье\n\n- Физическое состояние\n- Биохакинг\n- Сон и восстановление",
+      "x": 600,
+      "y": -300,
+      "width": 250,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "finance_label",
+      "type": "text",
+      "text": "## 💰 Финансы\n\n- Доходы\n- Расходы\n- Инвестиции",
+      "x": 600,
+      "y": 200,
+      "width": 250,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "learning_label",
+      "type": "text",
+      "text": "## 🧠 Обучение\n\n- Навыки\n- Книги\n- Курсы",
+      "x": -750,
+      "y": -300,
+      "width": 250,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "work_label",
+      "type": "text",
+      "text": "## 💼 Работа\n\n- Проекты\n- Задачи\n- Время",
+      "x": -750,
+      "y": 200,
+      "width": 250,
+      "height": 150,
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge1",
+      "fromNode": "center",
+      "fromSide": "top",
+      "toNode": "home",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge2",
+      "fromNode": "center",
+      "fromSide": "left",
+      "toNode": "goals",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge3",
+      "fromNode": "center",
+      "fromSide": "right",
+      "toNode": "projects",
+      "toSide": "bottom"
+    },
+    {
+      "id": "edge4",
+      "fromNode": "center",
+      "fromSide": "left",
+      "toNode": "analytics",
+      "toSide": "top"
+    },
+    {
+      "id": "edge5",
+      "fromNode": "center",
+      "fromSide": "right",
+      "toNode": "biohacking",
+      "toSide": "top"
+    },
+    {
+      "id": "edge6",
+      "fromNode": "center",
+      "fromSide": "left",
+      "toNode": "stoplist",
+      "toSide": "right"
+    },
+    {
+      "id": "edge7",
+      "fromNode": "center",
+      "fromSide": "right",
+      "toNode": "kanban",
+      "toSide": "left"
+    },
+    {
+      "id": "edge8",
+      "fromNode": "center",
+      "fromSide": "bottom",
+      "toNode": "moc",
+      "toSide": "top"
+    },
+    {
+      "id": "edge9",
+      "fromNode": "goals",
+      "fromSide": "left",
+      "toNode": "learning_label",
+      "toSide": "right"
+    },
+    {
+      "id": "edge10",
+      "fromNode": "projects",
+      "fromSide": "right",
+      "toNode": "health_label",
+      "toSide": "left"
+    },
+    {
+      "id": "edge11",
+      "fromNode": "analytics",
+      "fromSide": "left",
+      "toNode": "work_label",
+      "toSide": "right"
+    },
+    {
+      "id": "edge12",
+      "fromNode": "biohacking",
+      "fromSide": "right",
+      "toNode": "finance_label",
+      "toSide": "left"
+    }
+  ]
+}

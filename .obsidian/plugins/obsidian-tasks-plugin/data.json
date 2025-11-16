@@ -1,0 +1,26 @@
+{
+  "globalFilter": "",
+  "globalQuery": "",
+  "removeGlobalFilter": false,
+  "setCreatedDate": true,
+  "setDoneDate": true,
+  "setScheduledDate": false,
+  "setStartDate": false,
+  "setScheduledDateEveryDay": false,
+  "setStartDateEveryDay": false,
+  "autoSuggestInEditor": true,
+  "autoSuggestMinMatch": 0,
+  "autoSuggestMaxItems": 20,
+  "provideAccessKeys": true,
+  "useFilenameAsScheduledDate": false,
+  "filenameAsDateFolders": [],
+  "recurrenceOnNextLine": false,
+  "headingOpened": {
+    "StyleSettings": true,
+    "QueryOptions": true,
+    "Dates": true,
+    "Dependencies": true,
+    "Tags": true,
+    "Debug": false
+  }
+}
